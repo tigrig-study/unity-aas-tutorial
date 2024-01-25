@@ -1,12 +1,28 @@
-using System.Collections;
-using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
 
 public class AddressableTest : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start() { }
+    [SerializeField]
+    private SpriteRenderer testSprite1;
 
-    // Update is called once per frame
-    void Update() { }
+    [SerializeField]
+    private SpriteRenderer testSprite2;
+
+    private async void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            testSprite1.sprite = await LoadSprite("game_ar_green");
+            testSprite2.sprite = await LoadSprite("rakugaki_graffiti");
+        }
+    }
+
+    private async Task<Sprite> LoadSprite(string address)
+    {
+        var handle = Addressables.LoadAssetAsync<Sprite>(address);
+        await handle.Task;
+        return handle.Result;
+    }
 }
