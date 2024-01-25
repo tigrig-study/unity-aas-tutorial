@@ -16,7 +16,17 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: f3bfb5d06459ff6438c49e72d170797d
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 41ae0f29cf85fa54f9ebd9b9307b7bec
+    m_Address: Assets/AAResources/game_ar_green.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f68dee940957ec544a3d53e1260b6ec7
+    m_Address: Assets/AAResources/rakugaki_graffiti.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 3eb00cb3ab7f2ca4895290b28d740882, type: 2}
   m_SchemaSet:
