@@ -14,8 +14,8 @@ public class AddressableTest : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            testSprite1.sprite = await LoadSprite("game_ar_green");
-            testSprite2.sprite = await LoadSprite("rakugaki_graffiti");
+            testSprite1.sprite = await LoadSprite("AAResources/game_ar_green.png");
+            testSprite2.sprite = await LoadSprite("AAResources/rakugaki_graffiti.png");
         }
     }
 
