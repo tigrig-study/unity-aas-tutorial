@@ -16,6 +16,14 @@ public class AddressableTest : MonoBehaviour
         {
             testSprite1.sprite = await LoadSprite("AAResources/game_ar_green.png");
             testSprite2.sprite = await LoadSprite("AAResources/rakugaki_graffiti.png");
+
+            var info = await LoadDlcInformation("DlcResources1/DlcInformation.json");
+            if (info.enabled)
+            {
+                testSprite1.sprite = await LoadSprite(
+                    "DlcResources1/syougatsu_hatsuhinode_2024.png"
+                );
+            }
         }
     }
 
@@ -25,4 +33,17 @@ public class AddressableTest : MonoBehaviour
         await handle.Task;
         return handle.Result;
     }
+
+    private async Task<DlcInformation> LoadDlcInformation(string address)
+    {
+        var handle = Addressables.LoadAssetAsync<TextAsset>(address);
+        await handle.Task;
+        return JsonUtility.FromJson<DlcInformation>(handle.Result.ToString());
+    }
+}
+
+public class DlcInformation
+{
+    public string version;
+    public bool enabled;
 }
