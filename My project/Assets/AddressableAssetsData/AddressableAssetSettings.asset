@@ -15,7 +15,7 @@ MonoBehaviour:
   m_DefaultGroup: f3bfb5d06459ff6438c49e72d170797d
   m_currentHash:
     serializedVersion: 2
-    Hash: 94e94a742dfd2d6e923a06aa5986965a
+    Hash: af24492e76273d72dbfc5e370aeafaad
   m_OptimizeCatalogSize: 0
   m_BuildRemoteCatalog: 1
   m_BundleLocalCatalog: 0
@@ -67,7 +67,7 @@ MonoBehaviour:
       - m_Id: eca859cb9356b39429830fb4a7f34aa3
         m_Value: ServerData/[BuildTarget]
       - m_Id: ae4d3bfc2a70ec5459f0dab18fc79a87
-        m_Value: http://[PrivateIpAddress]:[HostingServicePort]
+        m_Value: DlcResources/[BuildTarget]
     m_ProfileEntryNames:
     - m_Id: 60d5d2be216a44c44a552de738d2b1fe
       m_Name: BuildTarget
